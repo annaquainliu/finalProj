@@ -108,8 +108,9 @@
     top: 110px;
     left: 30px;
     display: flex;
-    gap: 70px;
+    gap: 100px;
 }
+
 .blush div {
     width: 20px;
     height: 10px;
