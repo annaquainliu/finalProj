@@ -63,8 +63,8 @@ function recordAudio() {
             interval = setInterval(() => {
                 // If the user cleared all of the letters
                 if (Object.keys(letters).length == 0) {
-                    resetScreen();
                     getAudio();
+                    resetScreen();
                     return;
                 }
                 
@@ -241,5 +241,12 @@ function resetScreen() {
 
     clearInterval(interval);
     interval = null;
+
+    if (mediaRecorder == null) {
+        return;
+    }
+
+    mediaRecorder.stop();
+    mediaRecorder = null;
 
 }
