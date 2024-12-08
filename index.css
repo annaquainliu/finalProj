@@ -1,0 +1,136 @@
+body, html {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(71, 164, 18);
+}
+
+@font-face {
+
+    font-family: 'stripe3D'; /* Choose a name for your font */
+
+    src: url('stripe3D.ttf'); /* Replace with the uploaded font file URL */
+
+    font-weight: normal;
+
+    font-style: normal;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+h1  {
+    animation: float 3s ease-in-out infinite;
+}
+
+* {
+    font-family: stripe3D;
+    color: pink;
+    text-shadow: 2px 2px 10px #075522;
+}
+
+#main {
+    width: 50vw;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+}
+
+#scream {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#back {
+    position: absolute;
+    bottom: 5vh;
+    left: 45vw;
+}
+
+#submit {
+    margin-top: 10vh;
+}
+
+.letter {
+    font-size: 1.2vw;
+    position: absolute;
+    
+}
+
+h1 {
+    margin-bottom: 5vh;
+    font-size: 2vw;
+}
+
+input {
+    background-color: rgba(240, 248, 255, 0.145);
+    border-radius: 40px;
+    width: 50vw;
+    height: 5vh;
+    font-size: 1vw;
+    padding: 20px;
+    border: 1px solid rgb(242, 205, 211);
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+button {
+    background: #48abe0;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.5vw;
+    display: inline-block;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.4s;
+    border: 0px solid black;
+    z-index: 2;
+}
+
+button:hover {
+    scale: 1.2;
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+#playAudioButton {
+    position: absolute;
+    top: 0;
+    margin-top: 2vh;
+    left: 41vw;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { 
+        transform: translate(0px, 0px) rotate(0deg); 
+    }
+    25% { 
+        transform: translate(5px, 5px) rotate(5deg); 
+    }
+    50% { 
+        transform: translate(0px, 0px) rotate(0deg); 
+    }
+    75% { 
+        transform: translate(-5px, 5px) rotate(-5deg); 
+    }
+    100% { 
+        transform: translate(0px, 0px) rotate(0deg); 
+    }
+}
